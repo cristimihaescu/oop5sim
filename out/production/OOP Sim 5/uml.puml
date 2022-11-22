@@ -1,0 +1,43 @@
+@startuml
+abstract class Employee{
+-employeeId : UUID
+-name : String
+-salary : int
+-salaryPerHour : int
+-employeeType : EmployeeType
++getSalary(employeeType)
+}
+
+enum EmployeeType{
+PART-TIME,
+BASE_SALARY
+}
+
+class Worker extends Employee{}
+
+class Supervisor extends Employee{
+List<Worker> workerList
++addWorker()
+}
+
+class Engineer extends Employee{}
+
+class SiteManager extends Employee{}
+
+class ConstructionSite{
+List <Worker> workerList
+-constructionType : ConstructionType
++avgWorkers() : int
++boolean isSiteManager()
+}
+
+enum ConstructionType{
+HOUSE,
+BLOCK,
+OFFICE_BUILDING
+}
+
+ConstructionSite --> Employee
+EmployeeType --> Employee
+ConstructionType --> ConstructionSite
+@enduml
