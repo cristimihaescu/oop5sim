@@ -1,6 +1,6 @@
 import java.util.UUID;
 
-public abstract class Employee implements Employeei{
+public abstract class Employee implements Employeei {
     UUID employeeId;
     String name;
     int salary;
@@ -29,4 +29,4 @@ public abstract class Employee implements Employeei{
         this.workingHours = workingHours;
         this.employeeType = employeeType;
     }
-    }
+}

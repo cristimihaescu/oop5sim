@@ -10,7 +10,7 @@ public class ConstructionSite {
         this.employeeList = new ArrayList<>();
     }
 
-    public void addEmployee(Employee... employees) {
+    public void addEmployee(Employee...employees) {
         employeeList.addAll(List.of(employees));
     }
 
